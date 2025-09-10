@@ -1,0 +1,61 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - find_hospital_visit
+  - find_last_record
+  - find_last_hospital_visit
+  - find_last_hospitalization
+  - find_last_surgery
+  - find_last_activity
+  - check_allergy
+  - check_habits
+  - check_pregnancy
+  - get_patient_overview
+  - get_contact_info
+  - find_past_diagnoses
+  - find_current_medications
+
+entities:
+  - hospital_name
+  - date_range
+
+actions:
+  - action_find_hospital_visit
+  - action_find_last_record
+  - action_find_last_hospital_visit
+  - action_find_last_hospitalization
+  - action_find_last_surgery
+  - action_find_last_activity
+  - action_check_allergy
+  - action_check_habits
+  - action_check_pregnancy
+  - action_get_patient_overview
+  - action_get_contact_info
+  - action_find_past_diagnoses
+  - action_find_current_medications
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm Orby, your Medorc assistant. How can I help you today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

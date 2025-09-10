@@ -1,0 +1,35 @@
+Queries supported as of now:
+1. Getting visits of the particular hospital with year
+2. Find last/recent hospital_visit, record, activity, hospitalization, surgery
+3. Check patient habits includes smoking, tobacco, others
+4. Find allergies of patient
+5. Check pregnancy
+6. Patient Overview
+7. Patient Contact info
+8. Current medication
+9. Past diagnoses
+
+Example Queries:
+1. Summary of recent activity
+    Show me a summary of their recent activity.
+2. Recently Added Record
+    What was the last record added?
+3. Patient Overview
+    Give me the patient's overview.
+4. Patient Allergies
+    What are their known allergies?
+5. LifeStyle Questions
+    Does the patient have a history of smoking?
+    Does the patient have a history of exercise?
+6. Current Medications
+    List their current medications.
+7. Patient Surgical history
+    What's the patient's surgical history?
+8. Patient Diagnoses
+    Show me all past diagnoses.
+9. Hospitalized before
+    Have they been hospitalized before?
+10. Latest lab results
+    Find the latest lab results.
+    Show me the prescriptions from their last visit.
+    Are there any documents available?

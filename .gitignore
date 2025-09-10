@@ -1,0 +1,26 @@
+# Rasa
+orby-chatbot/models
+orby-chatbot/.rasa
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environment
+rasaenv/
+venv/
+.env/
+
+# Logs
+logs/
+*.log
+
+# Coverage
+coverage/
+
+# IDE
+.idea/
+.vscode/

@@ -1,0 +1,39 @@
+// This function sends a message to Rasa and gets the response
+
+async function sendMessageToRasa(messageText, userId, patientId) {
+
+    // The endpoint for Rasa's REST channel
+    const RASA_API_URL = "http://localhost:5005/webhooks/rest/webhook";
+
+    // The user's message is added to the chat history immediately
+    // The bot's response will be added after the API call
+    const newUserMessage = { text: messageText, sender: 'user' };
+    setMessages(prevMessages => [...prevMessages, newUserMessage]);
+
+    try {
+        // Send the message to the Rasa server
+        const response = await fetch(RASA_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                sender: userId, // The unique ID for the conversation
+                message: messageText,
+                metadata: {      // Your custom data payload
+                    user_id: userId,
+                    patient_id: patientId
+                }
+            })
+        });
+
+        const botResponses = await response.json();
+
+        // Add the bot's response(s) to the chat history
+        const newBotMessages = botResponses.map(resp => ({ text: resp.text, sender: 'bot' }));
+        setMessages(prevMessages => [...prevMessages, ...newBotMessages]);
+
+    } catch (error) {
+        console.error("Error communicating with Rasa:", error);
+    }
+}

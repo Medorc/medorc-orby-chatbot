@@ -1,0 +1,87 @@
+# In orby-chatbot/data/rules.yml
+
+version: "3.1"
+
+rules:
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Handle bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Handle hospital visit request
+    steps:
+      - intent: find_hospital_visit
+      - action: action_find_hospital_visit
+
+  - rule: Handle find last record
+    steps:
+      - intent: find_last_record
+      - action: action_find_last_record
+
+  - rule: Handle find last hospital visit
+    steps:
+      - intent: find_last_hospital_visit
+      - action: action_find_last_hospital_visit
+
+  - rule: Handle find last hospitalization
+    steps:
+      - intent: find_last_hospitalization
+      - action: action_find_last_hospitalization
+
+  - rule: Handle find last surgery
+    steps:
+      - intent: find_last_surgery
+      - action: action_find_last_surgery
+
+  - rule: Handle find last activity
+    steps:
+      - intent: find_last_activity
+      - action: action_find_last_activity
+
+  - rule: Handle allergy check
+    steps:
+      - intent: check_allergy
+      - action: action_check_allergy
+
+  - rule: Handle habits check
+    steps:
+      - intent: check_habits
+      - action: action_check_habits
+
+  - rule: Handle pregnancy check
+    steps:
+      - intent: check_pregnancy
+      - action: action_check_pregnancy
+
+  - rule: Handle patient overview request
+    steps:
+      - intent: get_patient_overview
+      - action: action_get_patient_overview
+
+  - rule: Handle contact info request
+    steps:
+      - intent: get_contact_info
+      - action: action_get_contact_info
+
+  - rule: Handle past diagnoses request
+    steps:
+      - intent: find_past_diagnoses
+      - action: action_find_past_diagnoses
+
+  - rule: Handle current medications request
+    steps:
+      - intent: find_current_medications
+      - action: action_find_current_medications
+
+
+

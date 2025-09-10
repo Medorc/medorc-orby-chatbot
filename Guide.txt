@@ -1,0 +1,17 @@
+To run Orby you want a python 1 environment so you have to create it by the command
+    - python -m venv ./rasaenv
+The command creates a rasa environment to run the model
+To enter the rasa environment use the command
+    - .//rasaenv/Scripts/activate
+Now you entered into rasa environment indicated by (rasaenv) in your cmd
+Now you have to train the bot, To do so use
+    - cd orby-chatbot
+    - rasa train
+In order to chat with the bot on cmd use
+    - rasa  shell
+To make the chatbot to listen on the port '5005' use
+    - rasa run --enable-api --cors "*"
+
+Other Commands:
+To create a new bot : rasa init
+To validate the data(data/nlu.yml, data/rules.yml, domain.yml): rasa data validate
