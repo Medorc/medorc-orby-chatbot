@@ -1,0 +1,48 @@
+# In orby-chatbot/tests/real_world_test.yml
+
+version: "3.1"
+nlu:
+  # --- Typos & Spelling Mistakes ---
+  - intent: find_lab_results
+    examples: |
+      - shwo me my lab resluts
+
+  - intent: find_doctor_visit
+    examples: |
+      - when did I see dr arjun
+
+  - intent: get_patient_overview
+    examples: |
+      - patient overveiw
+
+  # --- Slang & Casual Language ---
+  - intent: find_current_medications
+    examples: |
+      - what pills am I on right now?
+      - gimme the latest prescription
+
+  - intent: get_contact_info
+    examples: |
+      - need their phone number
+
+  - intent: find_specialist
+    examples: |
+      - find me a heart doctor
+
+  # --- Indirect or Ambiguous Phrasing ---
+  - intent: find_last_hospitalization
+    examples: |
+      - I need to know about the last time I was admitted
+
+  - intent: get_record_count
+    examples: |
+      - how many times have I had surgery at [KMCH](hospital_name)
+
+  # --- Combining Entities ---
+  - intent: find_doctor_visit
+    examples: |
+      - did [Dr. Priya]{"entity": "doctor_name", "group": "full_name"} ever treat me for a [fever](diagnosis_name)
+
+  - intent: find_hospital_visit
+    examples: |
+      - my [KMCH](hospital_name) visits in [2024](date_range)

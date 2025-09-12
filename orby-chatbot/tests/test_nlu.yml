@@ -1,0 +1,128 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - good morning
+      - let's go
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good night
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - of course
+
+  - intent: deny
+    examples: |
+      - no
+      - not really
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - am I talking to a human?
+
+  - intent: find_hospital_visit
+    examples: |
+      - was I at [Ganga Hospital](hospital_name)
+      - show my visits in [2024](date_range)
+      - did I go to [KMCH](hospital_name) in [2023](date_range)
+
+  - intent: find_last_record
+    examples: |
+      - show my most recent record
+
+  - intent: find_last_hospital_visit
+    examples: |
+      - show my last hospital visit
+
+  - intent: find_last_hospitalization
+    examples: |
+      - what's my most recent hospitalization record?
+
+  - intent: find_last_surgery
+    examples: |
+      - my last surgery details
+
+  - intent: find_last_activity
+    examples: |
+      - what is the last event in my records?
+
+  - intent: check_allergy
+    examples: |
+      - are there any known allergies
+      - show allergy info
+
+  - intent: check_habits
+    examples: |
+      - any lifestyle habits like smoking or drinking?
+      - show me their habits
+
+  - intent: check_pregnancy
+    examples: |
+      - what is the pregnancy status
+      - are they expecting
+
+  - intent: get_patient_overview
+    examples: |
+      - show me a summary of their record
+      - give me the patient file
+
+  - intent: get_contact_info
+    examples: |
+      - what is the patient's phone number
+      - find contact details
+
+  - intent: find_past_diagnoses
+    examples: |
+      - show me the diagnosis history
+
+  - intent: find_current_medications
+    examples: |
+      - show me the latest prescription
+
+  - intent: find_doctor_visit
+    examples: |
+      - when did I see [Dr. Arjun Kumar]{"entity": "doctor_name", "group": "full_name"}
+      - check my history with [Joseph](doctor_name)
+
+  - intent: find_lab_results
+    examples: |
+      - find my lab results from [last month](date_range)
+      - can you pull up the lab reports
+
+  - intent: find_emergency_contact
+    examples: |
+      - who is the emergency contact
+      - list all emergency contacts
+
+  - intent: get_health_tip
+    examples: |
+      - tell me something about [diet](tip_category)
+      - can you give me a random tip
+
+  - intent: find_specialist
+    examples: |
+      - I need a [female](gender) [dermatologist](specialization) in [Coimbatore](location)
+      - are there any [pediatricians](specialization) in [Chennai](location)
+
+  - intent: find_hospital
+    examples: |
+      - are there any [private](hospital_type) hospitals nearby
+      - I need to find [Ganga Hospital](hospital_name)
+
+  - intent: get_record_count
+    examples: |
+      - what is the count of my visits to [Dr. Priya](doctor_name)
+      - give me a count of [consultation](entry_type) records
+
+  - intent: find_treatments_for_diagnosis
+    examples: |
+      - show me treatments for [hypertension](diagnosis_name)
+      - what was the treatment plan for my [knee surgery](diagnosis_name)

@@ -1,0 +1,22 @@
+# In orby-chatbot/data/synonyms.yml
+version: "3.1"
+nlu:
+  - synonym: Dr. Priya
+    examples: |
+      - Priya
+      - Dr Priya
+
+  - synonym: Dr. Arjun Kumar
+    examples: |
+      - Arjun Kumar
+      - Dr Arjun Kumar
+
+  - synonym: Dr. Senthil
+    examples: |
+      - Senthil
+      - Dr Senthil
+
+  - synonym: Dr. Joseph
+    examples: |
+      - Joseph
+      - Dr Joseph

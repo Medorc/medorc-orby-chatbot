@@ -1,0 +1,4 @@
+# In orby-chatbot/data/regex.yml
+
+- regex: Dr\.?\s([A-Z]\.\s)?[A-Za-z]+(\s[A-Za-z]+)?
+  name: doctor_name

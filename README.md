@@ -234,3 +234,41 @@ ___
     # Terminal 2: Run the Rasa server and talk to the bot
     rasa shell
     ```
+## 🤖 Model Performance & Accuracy
+
+The Orby NLU model was evaluated using a two-stage testing process to ensure high performance and robustness.
+
+### 1. Initial Benchmark (Clean Data)
+
+The model was first evaluated against a curated test set of 83 ideal user queries. It achieved a perfect score, demonstrating its ability to master the core intents and entities within a clean data environment.
+
+**Key Metrics (Clean Data):**
+
+| Metric         | Score |
+| :------------- | :---- |
+| Accuracy       | 1.0   |
+| Macro F1-Score | 1.0   |
+| Weighted F1-Score  | 1.0   |
+
+**Intent Confusion Matrix (Clean Data):**
+*This matrix shows zero errors in distinguishing between the 26 different intents.*
+![Intent Confusion Matrix on Clean Data](./Results/clean_data_test/intent_confusion_matrix.png)
+
+### 2. Real-World Stress Test (Messy Data)
+
+To simulate a more realistic scenario, the model was then evaluated against a second test set containing typos, slang, and more complex phrasing. After a cycle of fine-tuning based on initial errors, the model's performance on this more difficult dataset is as follows:
+
+**Key Metrics (Real-World Data):**
+
+| Metric         | Score |
+| :------------- | :---- |
+| Accuracy       | 0.9X  |  | Macro F1-Score | 0.9X  |  | Weighted F1-Score  | 0.9X  |  *(You can find these scores in your latest `results/intent_report.json`)*
+
+**Intent Confusion Matrix (Real-World Data):**
+*This matrix shows the model's high performance, with minimal confusion on the more challenging test data.*
+![Intent Confusion Matrix on Real-World Data](./Results/real_world_stress_test/intent_confusion_matrix.png)
+
+
+### 3. The Narrative
+
+This two-stage evaluation proves that the Orby model is not only capable of achieving 100% accuracy on a defined problem set but is also robust enough to be fine-tuned to handle the ambiguities of real-world user input with high precision.

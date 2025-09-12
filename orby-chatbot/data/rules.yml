@@ -83,5 +83,45 @@ rules:
       - intent: find_current_medications
       - action: action_find_current_medications
 
+  - rule: Handle doctor visit request
+    steps:
+      - intent: find_doctor_visit
+      - action: action_find_doctor_visit
+
+  - rule: Handle find lab results request
+    steps:
+      - intent: find_lab_results
+      - action: action_find_lab_results
+
+  - rule: Handle find emergency contact request
+    steps:
+      - intent: find_emergency_contact
+      - action: action_find_emergency_contact
+
+  - rule: Handle get health tip request
+    steps:
+      - intent: get_health_tip
+      - action: action_get_health_tip
+
+  - rule: Handle find specialist request
+    steps:
+      - intent: find_specialist
+      - action: action_find_specialist
+
+  - rule: Handle find hospital request
+    steps:
+      - intent: find_hospital
+      - action: action_find_hospital
+
+  - rule: Handle get record count request
+    steps:
+      - intent: get_record_count
+      - action: action_get_record_count
+
+  - rule: Handle find treatments request
+    steps:
+      - intent: find_treatments_for_diagnosis
+      - action: action_find_treatments_for_diagnosis
+
 
 

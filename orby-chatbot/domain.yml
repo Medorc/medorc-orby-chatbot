@@ -1,6 +1,6 @@
 version: "3.1"
 
-intents:
+intents: # Current User Intents: 21/20
   - greet
   - goodbye
   - affirm
@@ -19,12 +19,36 @@ intents:
   - get_contact_info
   - find_past_diagnoses
   - find_current_medications
+  - find_doctor_visit # Not stable yet
+  - find_lab_results
+  - find_emergency_contact
+  - get_health_tip
+  - find_specialist
+  - find_hospital
+  - get_record_count
+  - find_treatments_for_diagnosis
 
-entities:
+
+entities: # Current User Entities: 14/10
   - hospital_name
   - date_range
+  - doctor_name:
+      roles:
+        - full_name
+  - contact_name
+  - contact_relation
+  - phone_number
+  - tip_category
+  - specialization
+  - location
+  - gender
+  - experience_years
+  - hospital_type
+  - entry_type
+  - diagnosis_name
 
-actions:
+
+actions: # Current RASA Actions : 20/15
   - action_find_hospital_visit
   - action_find_last_record
   - action_find_last_hospital_visit
@@ -38,6 +62,14 @@ actions:
   - action_get_contact_info
   - action_find_past_diagnoses
   - action_find_current_medications
+  - action_find_doctor_visit
+  - action_find_lab_results
+  - action_find_emergency_contact
+  - action_get_health_tip
+  - action_find_specialist
+  - action_find_hospital
+  - action_get_record_count
+  - action_find_treatments_for_diagnosis
 
 responses:
   utter_greet:

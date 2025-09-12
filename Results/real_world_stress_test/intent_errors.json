@@ -1,0 +1,10 @@
+[
+  {
+    "text": "find me a heart doctor",
+    "intent": "find_specialist",
+    "intent_prediction": {
+      "name": "find_hospital",
+      "confidence": 0.4627222716808319
+    }
+  }
+]

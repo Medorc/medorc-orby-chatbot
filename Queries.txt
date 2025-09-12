@@ -8,6 +8,12 @@ Queries supported as of now:
 7. Patient Contact info
 8. Current medication
 9. Past diagnoses
+10. Patient doctor visit
+11. Find lab results by date
+12. Find emergency contacts by name, relation and number
+13. Random health tip
+14. Find specialist doctor by specialization, experience, place
+15. Find hospital by name, type, location
 
 Example Queries:
 1. Summary of recent activity
